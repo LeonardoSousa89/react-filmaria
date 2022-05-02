@@ -38,7 +38,10 @@ export default function Filme(){
                 <div className='area-buttons'>
                     <button className='salvar'>salvar</button>
                     <button className='trailer'>
-                        <a href='http://www.google.com' target='_blank'>trailer</a>
+                        <a  href={`https://youtube.com/results?search_query=${filme.nome} trailer`} 
+                            target='_blank'>
+                            trailer
+                        </a>
                     </button>
                 </div>
             </article>
