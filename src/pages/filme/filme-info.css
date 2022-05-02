@@ -1,0 +1,28 @@
+.lista-filme{
+    margin:15px;
+}
+
+.lista-filme article{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background-color:#fff;
+    margin:15px;
+    padding:1px;
+    border-radius:5px;
+}
+
+.lista-filme strong{
+    padding-bottom:15px;
+    font-size:22px;
+}
+
+.lista-filme img{
+    width:800px;
+    max-height:350px;
+}
+
+.lista-filme p{
+    width:800px;
+}
