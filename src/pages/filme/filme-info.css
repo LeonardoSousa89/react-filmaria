@@ -25,4 +25,43 @@
 
 .lista-filme p{
     width:800px;
+    color:#fff;
+    background-color:brown;
+    font-size:20px;
+    text-align:center;
+    border-bottom-left-radius:8px;
+    border-bottom-right-radius:8px;
+    margin-top:-15px;
+}
+
+.area-buttons button{
+    margin-right:12px;
+    margin-top:14px;
+    margin-left:0;
+    font-size:20px;
+    border:0;
+    outline:none;
+    padding:12px;
+    border-radius:4px;
+    cursor:pointer;
+    background-color:brown;
+    color: #fff;
+    transition:all 0.5s;
+}
+
+.area-buttons button a{
+    text-decoration:none;
+    color: #fff;
+}
+
+.salvar:hover{
+    background-color:#fff;
+    color: brown;
+    border:1px solid brown;
+}
+
+.trailer:hover{
+    background-color:#fff;
+    color: brown;
+    border:1px solid brown;
 }
