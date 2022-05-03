@@ -1,0 +1,37 @@
+.meus-filmes{
+    margin-top:25px;
+}
+
+.meus-filmes ul li{
+    margin-bottom:10px;
+    list-style:none;
+    display:flex;
+    justify-content: space-between;
+}
+
+.meus-filmes ul li strong{
+    margin-right:40px;
+}
+
+.meus-filmes ul li a{
+    text-decoration:none;
+    margin-right:15px;
+    color:brown;
+}
+
+.meus-filmes ul li button{
+    border:none;
+    background-color:brown;
+    border-radius:6px;
+    color:#fff;
+    padding:5px;
+    cursor:pointer;
+    transition:all 0.5s;
+}
+
+.btn:hover{
+    background-color:#fff;
+    color:brown;
+    border:solid 1px brown;
+}
+
