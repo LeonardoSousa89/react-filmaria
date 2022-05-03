@@ -12,13 +12,20 @@ export default function Favoritos(){
     },[])
 
 
-    function excluir(){
-        // localStorage.removeItem('_FILMARIA')
+    function excluirFilme(filmeId){
+        let filtroFilmes = filmes.filter((item)=>{
+            return (item.id !== filmeId) 
+        })
+
+        setFilmes(filtroFilmes)
+        localStorage.setItem('_FILMARIA',JSON.stringify(filtroFilmes))
     }
 
     return(
         <div className='meus-filmes'>
             <h2>Meus filmes</h2>
+
+            {filmes.length === 0 && <span>Você nãp possui nenhum filme cadastrado!   :(</span>}
 
             <ul>
                 {filmes.map((filme) =>{
@@ -26,7 +33,7 @@ export default function Favoritos(){
                         <li key={filme.id}>
                             <strong>{filme.nome}</strong>
                             <Link to={`/filmes/${filme.id}`}>ver detalhes</Link>
-                            <button className='btn' onClick={excluir}>excluir</button>
+                            <button className='btn' onClick={() => excluirFilme(filme.id)}>excluir</button>
                         </li>
                     )
                 })}
