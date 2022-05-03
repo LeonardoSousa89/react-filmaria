@@ -17,7 +17,7 @@ export default function Filme(){
             setLoading(false)
         }
 
-        loadFilme()
+        loadFilme() 
 
     },[])
 
@@ -29,6 +29,23 @@ export default function Filme(){
         )
     }
 
+    function salvarFilme(){
+        const minhaLista = localStorage.getItem('_FILMARIA')
+
+        let filmeSalvos  = JSON.parse(minhaLista) || [] 
+
+        const hasFilme = filmeSalvos.some((filmeSalvo) => filmeSalvo.id === filme.id)
+
+        if(hasFilme){
+            alert('Este filme já encontra-se na lista de filmes salvos.')
+            return
+        }
+
+        filmeSalvos.push(filme)
+        localStorage.setItem('_FILMARIA', JSON.stringify(filmeSalvos))
+        alert('Filme salvo com sucesso.')
+    }
+
     return(
         <div className='lista-filme'>
             <article>
@@ -36,7 +53,7 @@ export default function Filme(){
                 <img src={filme.foto} alt={filme.nome} />
                 <p>{filme.sinopse}</p>
                 <div className='area-buttons'>
-                    <button className='salvar'>salvar</button>
+                    <button className='salvar' onClick={salvarFilme}>salvar</button>
                     <button className='trailer'>
                         <a  href={`https://youtube.com/results?search_query=${filme.nome} trailer`} 
                             target='_blank'
