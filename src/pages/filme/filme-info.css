@@ -24,13 +24,14 @@
 }
 
 .lista-filme p{
-    width:800px;
+    width:770px;
     color:#fff;
     background-color:brown;
     font-size:20px;
     text-align:center;
     border-bottom-left-radius:8px;
     border-bottom-right-radius:8px;
+    padding:15px;
     margin-top:-15px;
 }
 
